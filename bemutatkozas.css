@@ -1,0 +1,210 @@
+/* Navigációs sáv */
+.navigaciossav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 1);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 24px;
+    position: relative;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-left li,
+.nav-right li,
+.mobile-menu li {
+    list-style: none;
+}
+
+.nav-left a,
+.nav-right a,
+.mobile-menu a {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(159, 126, 70);
+    font-weight: bolder;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover,
+.mobile-menu a:hover {
+    color: #b89e45;
+}
+
+.nav-left a::before,
+.nav-left a::after,
+.nav-right a::before,
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 50%;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.nav-left a::before,
+.nav-right a::before {
+    left: 0;
+    transform-origin: left;
+}
+
+.nav-left a::after,
+.nav-right a::after {
+    right: 0;
+    transform-origin: right;
+}
+
+.nav-left a:hover::before,
+.nav-left a:hover::after,
+.nav-right a:hover::before,
+.nav-right a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Hamburger ikon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: rgb(159, 126, 70);
+    display: block;
+    border-radius: 2px;
+}
+
+/* Mobil menü */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 15, 15, 0.95);
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+    border-top: 1px solid rgb(159, 126, 70);
+    z-index: 1000;
+}
+
+.mobile-menu li + li {
+    border-top: 1px solid #444;
+}
+
+.mobile-menu a {
+    color: rgb(159, 126, 70);
+    font-weight: 600;
+}
+
+/* Mutatja a mobil menüt ha aktív */
+.mobile-menu.show {
+    display: flex;
+}
+
+/* Bemutatkozás szekció */
+.bemutatkozas-szekcio {
+    background-color: #0f0f0f;
+    padding: 6rem 2rem 4rem; /* plusz padding a fix nav miatt */
+    color: white;
+    margin-top: 60px; /* hogy ne takarja a fixed nav */
+    min-height: 300px;
+}
+
+.bemutatkozas-wrapper {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bemutatkozas-wrapper h3 {
+    color: rgb(159, 126, 70);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.bemutatkozas-tartalom {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.bemutatkozas-tartalom p {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo-center {
+        position: static;
+        transform: none;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+}
+
+
+.bemutatkozas-kep{
+    max-width: 250px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(159,126,70,0.7);
+    object-fit: cover;
+    float: right;
+    margin: 3rem;
+}
+
+p{
+    text-align: justify;
+}

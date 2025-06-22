@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="bemutatkozas.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <title>Borsos Dominika</title>
+</head>
+
+<body>
+    <nav class="navigaciossav">
+        <div class="nav-container">
+
+            <div class="hamburger" id="hamburger" aria-label="Menü megnyitása" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-left desktop-only">
+                <li><a href="./index.html">Kezdőlap</a></li>
+                <li><a href="./bemutatkozas.html">Bemutatkozás</a></li>
+                <li><a href="./index.html#esemenyek">Események</a></li>
+            </ul>
+
+            <div class="logo-center">
+                <img src="logo_nevnelkul.png" alt="Logó" class="logo" />
+            </div>
+
+            <ul class="nav-right desktop-only">
+                <li><a href="#galeria">Galéria</a></li>
+                <li><a href="./index.html#kapcsolat">Kapcsolat</a></li>
+                <li><a href="#partnerek">Partnerek</a></li>
+            </ul>
+
+            <ul class="mobile-menu" id="mobile-menu" aria-label="Mobil navigáció">
+                <li><a href="./index.html">Kezdőlap</a></li>
+                <li><a href="./bemutatkozas.html">Bemutatkozás</a></li>
+                <li><a href="./index.html#esemenyek">Események</a></li>
+                <li><a href="#galeria">Galéria</a></li>
+                <li><a href="./index.html#kapcsolat">Kapcsolat</a></li>
+                <li><a href="#partnerek">Partnerek</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="bemutatkozas" class="bemutatkozas-szekcio">
+        <div class="bemutatkozas-wrapper">
+            <h3>Bemutatkozás</h3>
+            <hr>
+            <div class="bemutatkozas-tartalom">
+
+                <p>Dominikát már kiskorában magával ragadta a zene csodálatos világa, tanulmányait 6 évesen kezdte.
+                    Céltudatosan és nagy szorgalommal sajátította el a zeneművészet fortélyait, elhivatottságát tükrözi,
+                    hogy már a kezdetekkor eldöntötte, hivatásának választja ezt a különleges szakmát. </p>
+                <p>A Székesfehérvári Hermann László Zeneművészeti Szakgimnázium elvégzése után 2019-ben felvételt nyert
+                    a Liszt Ferenc Zeneművészeti Egyetem klasszikus harmonika szakára, Ernyei László Tanár Úr, egyetemi
+                    adjunktus osztályába. </p>
+                    
+            <img src="IMG_5436.jpeg" class="bemutatkozas-kep" alt="Borsos Dominika portré" />
+        
+                <p>Tanulmányai során rengeteg szakmai tapasztalatot szerzett. Számos koncerten, mesterkurzuson, valamint
+                    országos és nemzetközi versenyen ért el kimagasló eredményt. Előadóművészi tevékenységét a műfaji
+                    sokszínűség, virtuozitás jellemzi. Repertoárjában egyaránt helyet kapnak a francia sanzonok,
+                    musettek, olasz dalok mellett a jazz standerdek, népszerű polkák, keringők. Családi vonatkozás miatt
+                    a sváb zenei hagyományok is fontosak számára, de klasszikus zenei tanulmányainak köszönhetően
+                    hasonlóan nagy szeretettel játsza Bach, Scarlatti, vagy a kortárs harmonikairodalom darabjait is,
+                    amelyek harmonikán igazán kuriózumnak számítanak. </p>
+                <p>Előadóművészként kiemelten fontos számára a hangszer népszerűsítése, sokoldalúságának bemutatása és a
+                    magas színvonalú előadásmód. </p>
+                <p>A pedagógiai pályán is aktívan tevékenykedik, jelenleg két zeneművészeti intézmény pedagógusa.
+                    2020-ban kezdte meg tanári munkásságát a Budapest XIII. Kerületi Fischer Annie Zeneiskolában,
+                    2023-tól kezdődően pedig a Veszprémi Csermák Antal Zeneiskolában is ellátja a billentyűs tanszak
+                    feladatait. </p>
+                <p>Előadóművészi és pedagógiai tevékenysége iránt egyaránt elkötelezett, hivatásaként tekint
+                    mindkettőre. </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Hamburger menü működtetése
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
+
+        // Opció: klikkelés kívülre bezárja a mobil menüt
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
