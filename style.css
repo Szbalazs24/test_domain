@@ -202,16 +202,9 @@
 
 
 
-.szlogo-idezet hr{
-    border-width: 2px;
-    /**margin-bottom: 3rem;**/
-}
 
-.alma{
-    margin-top: 25%;
-    
-}
 
+/*
 .szlogo-idezet img{
 
     width: 50%;
@@ -220,8 +213,11 @@
 
 }
 
+*/
 
-.szlogo-idezet hr, .szlogo-kepes hr{
+
+
+.szlogo-kepes hr{
     color: rgb(159, 126, 70);
 }
 
@@ -237,7 +233,7 @@
 .szlogo-kepes p{
     font-size: 1.2rem;
     font-style: italic;
-    text-align: left;
+    text-align: center;
 }
 /**
 .hossz{
