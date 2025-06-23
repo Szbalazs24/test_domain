@@ -141,37 +141,55 @@
 .mobile-menu.show {
     display: flex;
 }
-
-/* Bemutatkozás szekció */
+/* Bemutatkozás szekció - világosabb háttérrel */
 .bemutatkozas-szekcio {
-    background-color: #0f0f0f;
-    padding: 6rem 2rem 4rem; /* plusz padding a fix nav miatt */
-    color: white;
-    margin-top: 60px; /* hogy ne takarja a fixed nav */
+    background-color: #f8f6f2; /* törtfehér árnyalat */
+    padding: 2rem 2rem 4rem;
+    color: #2f2a25; /* sötétbarna szöveg */
+    margin-top: 60px;
     min-height: 300px;
 }
 
-.bemutatkozas-wrapper {
-    max-width: 700px;
-    width: 100%;
-    margin: 0 auto;
-}
-
+/* Címsor stílus */
 .bemutatkozas-wrapper h3 {
-    color: rgb(159, 126, 70);
+    color: rgb(159, 126, 70); /* aranybarna */
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
+    border-bottom: 2px solid rgba(159, 126, 70, 0.4);
+    padding-bottom: 0.5rem;
 }
 
+/* Szöveg */
 .bemutatkozas-tartalom {
     text-align: left;
     font-size: 1.1rem;
     line-height: 1.8;
+    color: #3e342b; /* kissé melegebb tónus */
 }
 
+/* Kép stílus - nem változik, csak margó finomhangolás */
+.bemutatkozas-kep {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(159,126,70,0.5);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+/* Bekezdések */
 .bemutatkozas-tartalom p {
     margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Világos háttérhez igazított vízszintes vonal */
+.bemutatkozas-wrapper hr {
+    border: 0;
+    border-top: 1px solid rgba(159, 126, 70, 0.3);
+    margin: 1.5rem 0;
 }
 
 /* Responsive */
@@ -196,13 +214,13 @@
 
 
 .bemutatkozas-kep{
-    max-width: 250px;
+    max-width: 350px;
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(159,126,70,0.7);
     object-fit: cover;
-    float: right;
-    margin: 3rem;
+    display: block;
+    margin: auto;
 }
 
 p{
