@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="galeria_img.css">
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <title>Borsos Dominika</title>
+</head>
+
+<body>
+    <nav class="navigaciossav">
+        <div class="nav-container">
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+            <ul class="nav-left desktop-only">
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="./bemutatkozas.html">Bemutatkozás</a></li>
+                <li><a href="./index.html#esemenyek">Események</a></li>
+            </ul>
+
+
+            <div class="logo-center">
+                <img src="logo_nevnelkul.png" alt="Logó" class="logo">
+            </div>
+
+
+            <ul class="nav-right desktop-only">
+                <li class="dropdown">
+                    <a href="#filmek">Galéria</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#galeria-fotok">Fotók</a></li>
+                        <li><a href="#galeria-videok">Videók</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#kapcsolat">Kapcsolat</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#elerhetoseg">Elérhetőség</a></li>
+                        <li><a href="#hirlevel">Hírlevél</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#filmek">Partnerek</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#tamogatok">Támogatók</a></li>
+                        <li><a href="#egyuttmukodes">Együttműködések</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <ul class="mobile-menu" id="mobile-menu">
+                <li><a href="#bev">Kezdőlap</a></li>
+
+                <!-- Bemutatkozás a főoldal másik lapjára mutat, nem kell almenü -->
+                <li><a href="./bemutatkozas.html">Bemutatkozás</a></li>
+
+                <li><a href="#esemenyek">Események</a></li>
+
+                <!-- Galéria lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Galéria</button>
+                    <ul class="submenu">
+                        <li><a href="galeria_img.html">Fotók</a></li>
+                        <li><a href="#galeria-videok">Videók</a></li>
+                    </ul>
+                </li>
+
+                <!-- Kapcsolat lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Kapcsolat</button>
+                    <ul class="submenu">
+                        <li><a href="#kapcsolat">Elérhetőség</a></li>
+                        <li><a href="#hirlevel">Hírlevél</a></li>
+                    </ul>
+                </li>
+
+                <!-- Partnerek lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Partnerek</button>
+                    <ul class="submenu">
+                        <li><a href="#tamogatok">Támogatók</a></li>
+                        <li><a href="#egyuttmukodes">Együttműködések</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <section id="galeria-fotok" class="galeria-nagy">
+        <h2>Fotók</h2>
+        <div class="galeria-keret">
+            <button class="gomb balra">&#10094;</button>
+            <img id="aktualis-kep" src="images/foto1.jpg" alt="Galéria kép">
+            <button class="gomb jobbra">&#10095;</button>
+        </div>
+    </section>
+
+
+    <script>
+
+
+        const kepek = [
+            "galeria_img/IMG_0294.JPG",
+            "galeria_img/IMG_0308.JPG",
+            "galeria_img/IMG_0324.JPG",
+            "galeria_img/IMG_0356.JPG",
+            "galeria_img/IMG_0433.JPG",
+            "galeria_img/IMG_0433(1).JPG",
+            "galeria_img/IMG_0788.PNG",
+            "galeria_img/IMG_0789.PNG",
+            "galeria_img/IMG_0814.PNG",
+            "galeria_img/IMG_4366.jpg",
+            "galeria_img/IMG_6661.PNG",
+            "galeria_img/IMG_6665.PNG",
+
+        ];
+
+        let aktualisIndex = 0;
+        const aktualisKep = document.getElementById("aktualis-kep");
+        const balraGomb = document.querySelector(".gomb.balra");
+        const jobbraGomb = document.querySelector(".gomb.jobbra");
+
+        function kepFrissit() {
+            aktualisKep.src = kepek[aktualisIndex];
+        }
+
+        balraGomb.addEventListener("click", () => {
+            aktualisIndex = (aktualisIndex - 1 + kepek.length) % kepek.length;
+            kepFrissit();
+        });
+
+        jobbraGomb.addEventListener("click", () => {
+            aktualisIndex = (aktualisIndex + 1) % kepek.length;
+            kepFrissit();
+        });
+
+        // Opcionálisan automatikus váltás:
+        // setInterval(() => {
+        //   aktualisIndex = (aktualisIndex + 1) % kepek.length;
+        //   kepFrissit();
+        // }, 5000);
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const submenuToggles = document.querySelectorAll('.submenu-toggle');
+
+            submenuToggles.forEach(btn => {
+                btn.addEventListener('click', () => {
+
+                    // aktuális <li> elem
+                    const parentLi = btn.parentElement;
+
+                    // almenü (<ul>) közvetlenül a gomb után
+                    const submenu = parentLi.querySelector('.submenu');
+
+                    // Bezárjuk a többi nyitott almenüt, hogy egyszerre csak egy legyen nyitva
+                    document.querySelectorAll('.mobile-menu .has-submenu').forEach(li => {
+                        if (li !== parentLi) {
+                            li.classList.remove('open');
+                            li.querySelector('.submenu').classList.remove('show');
+                        }
+                    });
+
+                    // Aktuális almenü váltása
+                    submenu.classList.toggle('show');
+                    parentLi.classList.toggle('open');
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburger.addEventListener('click', function () {
+                mobileMenu.classList.toggle('show');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -226,3 +226,47 @@
 p{
     text-align: justify;
 }
+
+
+@media (max-width: 768px) {
+
+    /* minden felső szintű <li> ugyanakkora sor */
+    .mobile-menu li {
+        width: 100%;
+    }
+
+    /* a felső szintű hivatkozások és a lenyitó gomb
+     ugyanazt a stílust kapják – itt egységes a magasság is */
+    .mobile-menu li>a,
+    .mobile-menu .submenu-toggle {
+        display: flex;
+        /* szöveg balra, (nyíl) jobbra */
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 52px;
+        /* ⇦ minden sor pontosan ekkora */
+        padding: 0 16px;
+        font-size: 1.05rem;
+        font-weight: bolder;
+        box-sizing: border-box;
+    }
+
+    /* egységes elválasztó vonal a sorok között */
+    .mobile-menu li+li {
+        border-top: 1px solid #444;
+    }
+
+    /* nyíl ikon pozíció-finomítás (lenyíló gombon) */
+    .mobile-menu .submenu-toggle::after {
+        right: 18px;
+        /* szépen igazodik a szélhez */
+    }
+
+    /* az almenü linkjei beljebb kezdődnek, hogy tagolt maradjon */
+    .mobile-menu .submenu a {
+        padding-left: 32px;
+        height: 48px;
+        /* lehet kisebb, hogy elkülönüljön */
+    }
+}

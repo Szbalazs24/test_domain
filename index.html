@@ -35,20 +35,66 @@
 
 
             <ul class="nav-right desktop-only">
-                <li><a href="#filmek">Galéria</a></li>
-                <li><a href="#kapcsolat">Kapcsolat</a></li>
-                <li><a href="#filmek">Partnerek</a></li>
+                <li class="dropdown">
+                    <a href="#filmek">Galéria</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="galeria_img.html">Fotók</a></li>
+                        <li><a href="#galeria-videok">Videók</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#kapcsolat">Kapcsolat</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#elerhetoseg">Elérhetőség</a></li>
+                        <li><a href="#hirlevel">Hírlevél</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#filmek">Partnerek</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#tamogatok">Támogatók</a></li>
+                        <li><a href="#egyuttmukodes">Együttműködések</a></li>
+                    </ul>
+                </li>
             </ul>
 
 
             <ul class="mobile-menu" id="mobile-menu">
                 <li><a href="#bev">Kezdőlap</a></li>
+
+                <!-- Bemutatkozás a főoldal másik lapjára mutat, nem kell almenü -->
                 <li><a href="./bemutatkozas.html">Bemutatkozás</a></li>
+
                 <li><a href="#esemenyek">Események</a></li>
-                <li><a href="#filmek">Galéria</a></li>
-                <li><a href="#kapcsolat">Kapcsolat</a></li>
-                <li><a href="#filmek">Partnerek</a></li>
+
+                <!-- Galéria lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Galéria</button>
+                    <ul class="submenu">
+                        <li><a href="galeria_img.html">Fotók</a></li>
+                        <li><a href="#galeria-videok">Videók</a></li>
+                    </ul>
+                </li>
+
+                <!-- Kapcsolat lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Kapcsolat</button>
+                    <ul class="submenu">
+                        <li><a href="#kapcsolat">Elérhetőség</a></li>
+                        <li><a href="#hirlevel">Hírlevél</a></li>
+                    </ul>
+                </li>
+
+                <!-- Partnerek lenyíló -->
+                <li class="has-submenu">
+                    <button class="submenu-toggle">Partnerek</button>
+                    <ul class="submenu">
+                        <li><a href="#tamogatok">Támogatók</a></li>
+                        <li><a href="#egyuttmukodes">Együttműködések</a></li>
+                    </ul>
+                </li>
             </ul>
+
         </div>
     </nav>
 
@@ -66,7 +112,7 @@
                 <hr>
                 <img src="logo_meret másolata.png" class="szlogologo" alt="">
                 <p>Merüljön el a zene csodálatos világában, és legyen részese a harmonika sokszínűségének köszönhetően
-                    egy különleges koncertnek.
+                    egy különleges koncertnek. <br>
                     Változatos programkínálat, hogy az élmény minden pillanata emlékezetes maradjon.
                 </p>
                 <p>Francia sanzonok, pezsdítő musettek- Olasz dolce vita- Hangulatos jazz standerdek- sváb dallamok-
@@ -76,73 +122,49 @@
             </div>
             <p id="esemenyek"></p>
         </div>
-        <div class="row esemenyrow">
-            <h3 class="text-center">Események</h3>
-            <div class="container py-5">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-4">
-                        <div class="card event-card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Budapest Zenei Est</h5>
-                                <h6 class="card-subtitle mb-2 ">2025. július 15. – 19:00</h6>
-                                <p class="card-text">Helyszín: Zeneakadémia, Budapest</p>
-                                <p class="card-text">Egy különleges est francia sanzonokkal, klasszikus művekkel és új
-                                    kompozíciókkal.</p>
-                                <a href="#kapcsolat" target="_blank" class="btn tovabb-gomb">Tovább</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card event-card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Veszprémi Nyári Fesztivál</h5>
-                                <h6 class="card-subtitle mb-2 ">2025. augusztus 5. – 18:00</h6>
-                                <p class="card-text">Helyszín: Hangvilla, Veszprém</p>
-                                <p class="card-text">Pezsdítő musettek, olasz dallamok, és hangulatos jazz egy estére.
-                                </p>
-                                <a href="#kapcsolat" target="_blank" class="btn tovabb-gomb">Tovább</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card event-card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Veszprémi Nyári Fesztivál</h5>
-                                <h6 class="card-subtitle mb-2 ">2025. augusztus 5. – 18:00</h6>
-                                <p class="card-text">Helyszín: Hangvilla, Veszprém</p>
-                                <p class="card-text">Pezsdítő musettek, olasz dallamok, és hangulatos jazz egy estére.
-                                </p>
-                                <a href="#kapcsolat" target="_blank" class="btn tovabb-gomb">Tovább</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card event-card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Veszprémi Nyári Fesztivál</h5>
-                                <h6 class="card-subtitle mb-2 ">2025. augusztus 5. – 18:00</h6>
-                                <p class="card-text">Helyszín: Hangvilla, Veszprém</p>
-                                <p class="card-text">Pezsdítő musettek, olasz dallamok, és hangulatos jazz egy estére.
-                                </p>
-                                <a href="#kapcsolat" target="_blank" class="btn tovabb-gomb">Tovább</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card event-card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Veszprémi Nyári Fesztivál</h5>
-                                <h6 class="card-subtitle mb-2 ">2025. augusztus 5. – 18:00</h6>
-                                <p class="card-text">Helyszín: Hangvilla, Veszprém</p>
-                                <p class="card-text">Pezsdítő musettek, olasz dallamok, és hangulatos jazz egy estére.
-                                </p>
-                                <a href="#kapcsolat" target="_blank" class="btn tovabb-gomb">Tovább</a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="esemeny-szekcio-wrapper row" id="esemenyek">
+            <h2 class="esemeny-cim">Események</h2>
+            <div class="esemeny-trioszekcio">
+                <div class="esemeny-oldal bal-oldal">
+                    <ul class="esemeny-lista">
+                        <li>
+                            <h4>Budapest Zenei Est</h4>
+                            <p><strong>2025. július 15. – 19:00</strong></p>
+                            <p>Zeneakadémia, Budapest</p>
+                            <p>Francia sanzonokkal, klasszikus művekkel és új kompozíciókkal.</p>
+                        </li>
+                        <li>
+                            <h4>Győri Harmonika Fesztivál</h4>
+                            <p><strong>2025. szeptember 12. – 18:30</strong></p>
+                            <p>Bartók Terem, Győr</p>
+                            <p>Klasszikus és kortárs művek egy estére.</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="esemeny-kozep"></div>
+
+                <div class="esemeny-oldal jobb-oldal">
+                    <ul class="esemeny-lista">
+                        <li>
+                            <h4>Veszprémi Nyári Fesztivál</h4>
+                            <p><strong>2025. augusztus 5. – 18:00</strong></p>
+                            <p>Hangvilla, Veszprém</p>
+                            <p>Musettek, olasz dallamok, hangulatos jazz.</p>
+                        </li>
+                        <li>
+                            <h4>Debreceni Klasszikus Est</h4>
+                            <p><strong>2025. október 3. – 20:00</strong></p>
+                            <p>Kölcsey Központ, Debrecen</p>
+                            <p>Harmonika és kamarazene varázslatos találkozása.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+
+
         <div class="row">
             <section id="hirlevel" class="hirlevel-section">
                 <div class="hirlevel-box">
@@ -151,10 +173,10 @@
                         method="GET" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
                         novalidate>
 
-                        <h2>Iratkozz fel a hírlevélre!</h2>
-
+                        <h2>Iratkozzon fel a hírlevélre!</h2>
+                        <p>Értesüljön elsőként az újdonságokról.</p>
                         <div class="mc-field-group">
-                            <label for="mce-EMAIL">Email címed <span>*</span></label>
+                            <label for="mce-EMAIL">Email címe <span>*</span></label>
                             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
                         </div>
 
@@ -175,7 +197,8 @@
 
                     <div class="kapcsolat-tartalom">
                         <p><strong>Telefon:</strong> <a href="tel:+36203585638">+36 20 358 5638</a></p>
-                        <p><strong>Email:</strong><a href="mailto:borsosdominika01@gmail.com">borsosdominika01@gmail.com</a></p>
+                        <p><strong>Email:</strong><a
+                                href="mailto:borsosdominika01@gmail.com">borsosdominika01@gmail.com</a></p>
                         <p><strong>Facebook:</strong> <a href="https://www.facebook.com/dominika.borsos"
                                 target="_blank">facebook.com/dominika.borsos</a></p>
                         <p><strong>Instagram:</strong> <a href="https://www.instagram.com/borsos_dominika_accordionist/"
@@ -183,6 +206,11 @@
                     </div>
                 </div>
             </section>
+        </div>
+        <div class="row">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfq6RiMPyU6ej9ijNcixwfrjTEQgufBWqIyboe63n2mjontGQ/viewform?embedded=true"
+                width="640" height="823" frameborder="0" marginheight="0" marginwidth="0">Betöltés…</iframe>
         </div>
     </div>
     <script>
@@ -266,6 +294,33 @@
             acceptBtn.addEventListener('click', () => {
                 localStorage.setItem('cookieAccepted', 'true');
                 banner.style.display = 'none';
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const submenuToggles = document.querySelectorAll('.submenu-toggle');
+
+            submenuToggles.forEach(btn => {
+                btn.addEventListener('click', () => {
+
+                    // aktuális <li> elem
+                    const parentLi = btn.parentElement;
+
+                    // almenü (<ul>) közvetlenül a gomb után
+                    const submenu = parentLi.querySelector('.submenu');
+
+                    // Bezárjuk a többi nyitott almenüt, hogy egyszerre csak egy legyen nyitva
+                    document.querySelectorAll('.mobile-menu .has-submenu').forEach(li => {
+                        if (li !== parentLi) {
+                            li.classList.remove('open');
+                            li.querySelector('.submenu').classList.remove('show');
+                        }
+                    });
+
+                    // Aktuális almenü váltása
+                    submenu.classList.toggle('show');
+                    parentLi.classList.toggle('open');
+                });
             });
         });
 

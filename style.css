@@ -24,6 +24,49 @@
     padding: 0;
 }
 
+/* Dropdown menü */
+.nav-right .dropdown {
+    position: relative;
+}
+
+.nav-right .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(15, 15, 15, 0.95);
+    min-width: 180px;
+    border: 1px solid rgb(159, 126, 70);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.nav-right .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-right .dropdown-menu li {
+    display: block;
+    padding: 0;
+}
+
+.nav-right .dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: rgb(159, 126, 70);
+    font-weight: normal;
+    background-color: transparent;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-right .dropdown-menu a:hover {
+    background-color: rgba(159, 126, 70, 0.1);
+    color: #d1aa61;
+}
+
+
 .logo-center {
     position: absolute;
     left: 50%;
@@ -43,8 +86,8 @@
 .nav-left a,
 .nav-right a,
 .mobile-menu a {
-    position: relative;      
-    overflow: hidden;       
+    position: relative;
+    overflow: hidden;
     display: block;
     padding: 10px;
     text-decoration: none;
@@ -82,9 +125,69 @@
     padding: 12px 0;
 }
 
-.mobile-menu li + li {
+.mobile-menu li+li {
     border-top: 1px solid #444;
 }
+
+/* ----- MOBIL ALMENÜK ----- */
+.mobile-menu .has-submenu {
+    width: 100%;
+}
+
+/* Gomb, ami lenyitja az almenüt – úgy néz ki, mint a sima link */
+.mobile-menu .submenu-toggle {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    font: inherit;
+    color: rgb(159, 126, 70);
+    font-weight: bolder;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Kis nyíl ikon (CSS-szel rajzolva) */
+.mobile-menu .submenu-toggle::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform .25s;
+}
+
+/* Nyíl lefelé nyitott állapotban */
+.mobile-menu .submenu.show+.submenu-toggle::after,
+.mobile-menu .has-submenu.open>.submenu-toggle::after {
+    transform: translateY(-50%) rotate(225deg);
+}
+
+/* Almenü lista */
+.mobile-menu .submenu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.9);
+}
+
+.mobile-menu .submenu.show {
+    display: flex;
+}
+
+/* Linkek az almenüben */
+.mobile-menu .submenu a {
+    padding: 10px 32px;
+    /* beljebb húzva */
+    font-weight: normal;
+    border-top: 1px solid #444;
+}
+
 
 
 @media (max-width: 768px) {
@@ -108,8 +211,8 @@
     .nav-container {
         justify-content: space-between;
     }
-    
-    
+
+
 }
 
 
@@ -139,7 +242,7 @@
     transform-origin: right;
 }
 
-.transparent{
+.transparent {
     background-color: #ffffff00;
 }
 
@@ -163,12 +266,12 @@
     content: "";
     position: absolute;
     inset: 0;
-        /* elmosás */
-    background-color: rgba(0, 0, 0, 0.538); 
+    /* elmosás */
+    background-color: rgba(0, 0, 0, 0.538);
     z-index: 1;
 }
 
-.hero-image > * {
+.hero-image>* {
     position: relative;
     z-index: 2;
     color: white;
@@ -184,16 +287,18 @@
     max-height: 100%;
 }
 
-.elvalaszto{
+.elvalaszto {
     height: 5rem;
     background-color: rgb(159, 126, 70);
 }
-.szlogo{
+
+.szlogo {
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
-.szlogo h4{
-    
+
+.szlogo h4 {
+
     color: rgb(159, 126, 70);
     font-weight: bold;
     margin: 3rem 15px auto 15px;
@@ -217,24 +322,25 @@
 
 
 
-.szlogo-kepes hr{
+.szlogo-kepes hr {
     color: rgb(159, 126, 70);
 }
 
-.szlogologo{
-    
+.szlogologo {
+
     display: block;
     margin: 3rem auto 3rem auto;
     width: 25%;
-    
-    
+
+
 }
 
-.szlogo-kepes p{
+.szlogo-kepes p {
     font-size: 1.2rem;
     font-style: italic;
     text-align: center;
 }
+
 /**
 .hossz{
     
@@ -261,7 +367,7 @@
     font-weight: bold;
 }
 
-.esemenyrow{
+.esemenyrow {
     background-color: rgb(159, 126, 70);
 }
 
@@ -284,7 +390,7 @@
     box-shadow: 0 0 10px rgba(159, 126, 70, 0.5);
 }
 
-.esemenyrow h3{
+.esemenyrow h3 {
     margin-top: 3rem;
 }
 
@@ -346,8 +452,12 @@
 .hirlevel-box h2 {
     text-align: center;
     font-size: 1.7rem;
-    margin-bottom: 1.5rem;
-    color: rgb(159, 126, 70);
+    
+    color: #9f7e46;
+}
+.hirlevel-box p {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .mc-field-group {
@@ -397,53 +507,178 @@
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    
+
 }
 
 .hirlevel-button:hover {
     background-color: #d1aa61;
     transform: scale(1.03);
 }
+
 /* --- KAPCSOLAT SZEKCIÓ --- */
 /* Külső szekció: csak háttér- és belső térköz */
-.kapcsolat-szekcio{
-    background:#0f0f0f;
-    padding:4rem 2rem;
-    color:#fff;
+.kapcsolat-szekcio {
+    background: #0f0f0f;
+    padding: 4rem 2rem;
+    color: #fff;
 }
 
 /* Központosító burok – Ő lesz max 600 px széles és **mindig középen** */
-.kapcsolat-wrapper{
-    max-width:600px;
-    width:100%;
-    margin:0 auto;          /* <- tényleges középre húzás */
+.kapcsolat-wrapper {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    /* <- tényleges középre húzás */
 }
 
 /* Címsor */
-.kapcsolat-wrapper h3{
-    color:rgb(159,126,70);
-    font-size:2rem;
-    margin-bottom:2rem;
-    text-align:center;      /* csak a cím középre */
+.kapcsolat-wrapper h3 {
+    color: rgb(159, 126, 70);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    /* csak a cím középre */
 }
 
 /* Tartalom: balra zárt szöveg */
-.kapcsolat-tartalom{
-    text-align:center;
-    
+.kapcsolat-tartalom {
+    text-align: center;
+
 }
 
-.kapcsolat-tartalom p{
-    font-size:1.1rem;
-    margin:.8rem 0;
+.kapcsolat-tartalom p {
+    font-size: 1.1rem;
+    margin: .8rem 0;
 }
 
-.kapcsolat-tartalom a{
-    color:rgb(159,126,70);
-    text-decoration:none;
-    transition:color .3s;
+.kapcsolat-tartalom a {
+    color: rgb(159, 126, 70);
+    text-decoration: none;
+    transition: color .3s;
 }
-.kapcsolat-tartalom a:hover{
-    color:#d1aa61;
-    text-decoration:underline;
+
+.kapcsolat-tartalom a:hover {
+    color: #d1aa61;
+    text-decoration: underline;
+}
+
+/* -------------------------------------------------
+   MOBILMENÜ – egységes méret és sor-sor igazítás
+-------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* minden felső szintű <li> ugyanakkora sor */
+    .mobile-menu li {
+        width: 100%;
+    }
+
+    /* a felső szintű hivatkozások és a lenyitó gomb
+     ugyanazt a stílust kapják – itt egységes a magasság is */
+    .mobile-menu li>a,
+    .mobile-menu .submenu-toggle {
+        display: flex;
+        /* szöveg balra, (nyíl) jobbra */
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 52px;
+        /* ⇦ minden sor pontosan ekkora */
+        padding: 0 16px;
+        font-size: 1.05rem;
+        font-weight: bolder;
+        box-sizing: border-box;
+    }
+
+    /* egységes elválasztó vonal a sorok között */
+    .mobile-menu li+li {
+        border-top: 1px solid #444;
+    }
+
+    /* nyíl ikon pozíció-finomítás (lenyíló gombon) */
+    .mobile-menu .submenu-toggle::after {
+        right: 18px;
+        /* szépen igazodik a szélhez */
+    }
+
+    /* az almenü linkjei beljebb kezdődnek, hogy tagolt maradjon */
+    .mobile-menu .submenu a {
+        padding-left: 32px;
+        height: 48px;
+        /* lehet kisebb, hogy elkülönüljön */
+    }
+}
+
+.esemeny-szekcio-wrapper {
+    background-color: #0f0f0f;
+    padding: 4rem 1rem;
+    color: white;
+}
+
+.esemeny-cim {
+    text-align: center;
+    color: rgb(159, 126, 70);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.esemeny-trioszekcio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.esemeny-oldal {
+    flex: 1;
+    min-width: 250px;
+}
+
+.esemeny-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.esemeny-lista li {
+    padding: 1rem 1.5rem;
+    border-left: 4px solid rgb(159, 126, 70);
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+
+.esemeny-lista h4 {
+    color: rgb(159, 126, 70);
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.esemeny-lista p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+.esemeny-kozep {
+    flex: 1;
+    background-image: url('IMG_5436.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    min-height: 400px;
+}
+
+/* Mobilbarát elrendezés */
+@media (max-width: 992px) {
+    .esemeny-trioszekcio {
+        flex-direction: column;
+    }
+
+    .esemeny-kozep {
+        min-height: 35rem;
+    }
+
+    .esemeny-cim {
+        font-size: 2rem;
+    }
 }
