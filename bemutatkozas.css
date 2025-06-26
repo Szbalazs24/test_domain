@@ -162,6 +162,7 @@
 
 /* Szöveg */
 .bemutatkozas-tartalom {
+   
     text-align: left;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -181,7 +182,8 @@
 
 /* Bekezdések */
 .bemutatkozas-tartalom p {
-    margin-bottom: 1.5rem;
+    margin: auto 6rem 3rem 6rem;
+
     text-align: justify;
 }
 
