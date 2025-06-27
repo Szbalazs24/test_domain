@@ -25,38 +25,38 @@
 
             <ul class="nav-left desktop-only">
                 <li><a href="#bev">Kezdőlap</a></li>
-                <li><a href="./bemutatkozas.html">Bemutatkozás</a></li>
+                <li><a href="./html/bemutatkozas.html">Bemutatkozás</a></li>
                 <li><a href="#esemenyek">Események</a></li>
             </ul>
 
 
             <div class="logo-center">
-                <img src="logo_nevnelkul.png" alt="Logó" class="logo">
+                <img src="./img/logo_nevnelkul.png" alt="Logó" class="logo">
             </div>
 
 
             <ul class="nav-right desktop-only">
                 <li class="dropdown">
-                    <a href="#filmek">Média</a>
+                    <a href="">Média</a>
                     <ul class="dropdown-menu">
-                        <li><a href="galeria_img.html">Fotók</a></li>
-                        <li><a href="#galeria-videok">Videók</a></li>
-                        <li><a href="#galeria-videok">Audió</a></li>
+                        <li><a href="./html/fotok.html">Fotók</a></li>
+                        <li><a href="./html/videok.html">Videók</a></li>
+                        <li><a href="./html/audio.html">Audió</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#kapcsolat">Kapcsolat</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#hirlevel">Üzenet</a></li>                
+                        <li><a href="./html/uzenet.html">Üzenet</a></li>                
                         <li><a href="#hirlevel">Hírlevél</a></li>
-                        <li><a href="#elerhetoseg">Elérhetőség</a></li>
+                        <li><a href="#kapcsolat">Elérhetőség</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#filmek">Partnerek</a>
+                    <a href="">Partnerek</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#tamogatok">Zenei paletta</a></li>
-                        <li><a href="#egyuttmukodes">Együttműködések</a></li>
+                        <li><a href="./html/zenei_paletta.html">Zenei paletta</a></li>
+                        <li><a href="./html/egyuttmukodesek.html">Együttműködések</a></li>
                     </ul>
                 </li>
             </ul>
@@ -66,16 +66,17 @@
                 <li><a href="#bev">Kezdőlap</a></li>
 
                 <!-- Bemutatkozás a főoldal másik lapjára mutat, nem kell almenü -->
-                <li><a href="./bemutatkozas.html">Bemutatkozás</a></li>
+                <li><a href="./html/bemutatkozas.html">Bemutatkozás</a></li>
 
                 <li><a href="#esemenyek">Események</a></li>
 
                 <!-- Galéria lenyíló -->
                 <li class="has-submenu">
-                    <button class="submenu-toggle">Galéria</button>
+                    <button class="submenu-toggle">Média</button>
                     <ul class="submenu">
-                        <li><a href="galeria_img.html">Fotók</a></li>
-                        <li><a href="#galeria-videok">Videók</a></li>
+                        <li><a href="./html/fotok.html">Fotók</a></li>
+                        <li><a href="./html/videok.html">Videók</a></li>
+                        <li><a href="./html/audio.html">Audio</a></li>
                     </ul>
                 </li>
 
@@ -83,8 +84,9 @@
                 <li class="has-submenu">
                     <button class="submenu-toggle">Kapcsolat</button>
                     <ul class="submenu">
-                        <li><a href="#kapcsolat">Elérhetőség</a></li>
+                        <li><a href="./html/uzenet.html">Üzenet</a></li>
                         <li><a href="#hirlevel">Hírlevél</a></li>
+                        <li><a href="#kapcsolat">Elérhetőség</a></li>
                     </ul>
                 </li>
 
@@ -92,8 +94,8 @@
                 <li class="has-submenu">
                     <button class="submenu-toggle">Partnerek</button>
                     <ul class="submenu">
-                        <li><a href="#tamogatok">Támogatók</a></li>
-                        <li><a href="#egyuttmukodes">Együttműködések</a></li>
+                        <li><a href="./html/zenei_paletta.html">Zenei paletta</a></li>
+                        <li><a href="./html/egyuttmukodesek.html">Együttműködések</a></li>
                     </ul>
                 </li>
             </ul>
@@ -106,14 +108,14 @@
     <div class="container-fluid" id="bev">
         <div class="row">
             <div class="hero-image">
-                <img src="logo_meret.png" class="kozepre-kep" alt="">
+                <img src="./img/logo_meret.png" class="kozepre-kep" alt="">
             </div>
         </div>
         <div class="row elvalaszto"></div>
         <div class="row szlogo">
             <div class="szlogo-kepes">
                 <hr>
-                <img src="logo_meret másolata.png" class="szlogologo" alt="">
+                <img src="./img/logo_meret másolata.png" class="szlogologo" alt="">
                 <p>Merüljön el a zene csodálatos világában, és legyen részese a harmonika sokszínűségének köszönhetően
                     egy különleges koncertnek. <br>
                     Változatos programkínálat, hogy az élmény minden pillanata emlékezetes maradjon.
@@ -246,7 +248,7 @@
 
                 const email = emailInput.value.trim();
                 if (!email) {
-                    messageBox.innerHTML = "<p style='color: #f44336;'>Kérlek, add meg az email címed!</p>";
+                    messageBox.innerHTML = "<p style='color: #f44336;'>Kérem, adja meg az email címét!</p>";
                     torles(); // üzenet törlése idővel
                     return;
                 }
@@ -263,7 +265,7 @@
                     .then(text => {
                         const data = JSON.parse(text.replace("if (typeof callback === 'function') { callback(", "").replace("); }", ""));
                         if (data.result === "success") {
-                            messageBox.innerHTML = "<p style='color: #4caf50;'>Sikeres feliratkozás! Köszönjük.</p>";
+                            messageBox.innerHTML = "<p style='color: #4caf50;'>Sikeres feliratkozás! Köszönjük!</p>";
                             emailInput.value = '';
                         } else {
                             messageBox.innerHTML = `<p style='color: #f44336;'>${data.msg}</p>`;
@@ -271,7 +273,7 @@
                         torles(); // üzenet eltüntetése 3 mp múlva
                     })
                     .catch(() => {
-                        messageBox.innerHTML = "<p style='color: #4caf50;'>Sikeres feliratkozás! Köszönjük.</p>";
+                        messageBox.innerHTML = "<p style='color: #4caf50;'>Sikeres feliratkozás! Köszönjük!</p>";
                         torles();
                     });
             });
@@ -342,7 +344,7 @@
     <div id="cookie-banner" class="cookie-banner">
         <p>
             Ez a weboldal sütiket használ a jobb felhasználói élmény érdekében.
-            <a href="adatkezeles.html">Adatkezelési tájékoztató</a>
+            <a href="./html/adatkezeles.html">Adatkezelési tájékoztató</a>
         </p>
         <button id="accept-cookies">Elfogadom</button>
     </div>

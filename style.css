@@ -256,7 +256,7 @@
 .hero-image {
     width: 100vw;
     height: 100vh;
-    background-image: url('DSC08930.jpeg');
+    background-image: url('./img/kezdolap_ideig.jpeg');
     background-size: cover;
     background-position: center;
 
@@ -297,7 +297,7 @@
     margin-bottom: 5rem;
 }
 
-body{
+body {
     background-color: #0f0f0f
 }
 
@@ -324,7 +324,7 @@ body{
 
 */
 
-.szlogo-kepes{
+.szlogo-kepes {
     background-color: #0f0f0f;
 }
 
@@ -461,9 +461,10 @@ body{
 .hirlevel-box h2 {
     text-align: center;
     font-size: 1.7rem;
-    
+
     color: #0f0f0f;
 }
+
 .hirlevel-box p {
     text-align: center;
     margin-bottom: 1rem;
@@ -521,7 +522,7 @@ body{
 }
 
 .hirlevel-button:hover {
-    
+
     transform: scale(1.03);
 }
 
@@ -620,7 +621,7 @@ body{
 
 .esemeny-szekcio-wrapper {
     background-color: #0f0f0f;
-    padding:  1rem;
+    padding: 1rem;
     color: white;
 }
 
@@ -671,7 +672,7 @@ body{
 
 .esemeny-kozep {
     flex: 1;
-    background-image: url('IMG_5436.jpeg');
+    background-image: url('./img/IMG_5436.jpeg');
     background-size: cover;
     background-position: center;
     border-radius: 1rem;
@@ -696,47 +697,54 @@ body{
 
 
 .hangjegyes-elvalaszto .violinkulcs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #0f0f0f; /* hogy kitakarja a vonalat */
-  padding: 0 12px;
-  font-size: 2rem;
-  color: rgb(159, 126, 70);
-  z-index: 1;
-  line-height: 1;
-  user-select: none;
-  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+
 }
 
 .violinkulcs {
-  font-size: 2rem;
-  color: rgb(159, 126, 70);
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
 }
 
 .hangjegyes-elvalaszto {
-  position: relative;
-  width: 60%;
-  height: 2px;
-  background-color: rgb(159, 126, 70);
-  margin: 4rem auto;
+    position: relative;
+    width: 60%;
+    height: 2px;
+    background-color: rgb(159, 126, 70);
+    margin: 4rem auto;
 }
 
 .violinkulcs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #0f0f0f;
-  padding: 0 12px;
-  font-size: 2rem;
-  color: rgb(159, 126, 70);
-  z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    /* hogy kitakarja a vonalat */
+    padding: 0 12px;
+    font-size: 2rem;
+    color: rgb(159, 126, 70);
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(159, 126, 70, 0.7);
 }
 
 .kapcsolat-ikon {
-  color: rgb(159, 126, 70);
-  font-size: 1.2rem;
-  margin-right: 8px;
+    color: rgb(159, 126, 70);
+    font-size: 1.2rem;
+    margin-right: 8px;
 }
