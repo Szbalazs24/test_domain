@@ -445,7 +445,7 @@ body{
 
 .hirlevel-section {
     max-width: 600px;
-    margin: 4rem auto;
+    margin: 4rem auto 1.5rem auto;
     padding: 2rem;
 }
 
@@ -620,7 +620,7 @@ body{
 
 .esemeny-szekcio-wrapper {
     background-color: #0f0f0f;
-    padding: 4rem 1rem;
+    padding:  1rem;
     color: white;
 }
 
@@ -691,4 +691,52 @@ body{
     .esemeny-cim {
         font-size: 2rem;
     }
+}
+
+
+
+.hangjegyes-elvalaszto .violinkulcs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0f0f0f; /* hogy kitakarja a vonalat */
+  padding: 0 12px;
+  font-size: 2rem;
+  color: rgb(159, 126, 70);
+  z-index: 1;
+  line-height: 1;
+  user-select: none;
+  
+}
+
+.violinkulcs {
+  font-size: 2rem;
+  color: rgb(159, 126, 70);
+}
+
+.hangjegyes-elvalaszto {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  background-color: rgb(159, 126, 70);
+  margin: 4rem auto;
+}
+
+.violinkulcs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0f0f0f;
+  padding: 0 12px;
+  font-size: 2rem;
+  color: rgb(159, 126, 70);
+  z-index: 1;
+}
+
+.kapcsolat-ikon {
+  color: rgb(159, 126, 70);
+  font-size: 1.2rem;
+  margin-right: 8px;
 }

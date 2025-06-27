@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -36,23 +37,25 @@
 
             <ul class="nav-right desktop-only">
                 <li class="dropdown">
-                    <a href="#filmek">Galéria</a>
+                    <a href="#filmek">Média</a>
                     <ul class="dropdown-menu">
                         <li><a href="galeria_img.html">Fotók</a></li>
                         <li><a href="#galeria-videok">Videók</a></li>
+                        <li><a href="#galeria-videok">Audió</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#kapcsolat">Kapcsolat</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#elerhetoseg">Elérhetőség</a></li>
+                        <li><a href="#hirlevel">Üzenet</a></li>                
                         <li><a href="#hirlevel">Hírlevél</a></li>
+                        <li><a href="#elerhetoseg">Elérhetőség</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#filmek">Partnerek</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#tamogatok">Támogatók</a></li>
+                        <li><a href="#tamogatok">Zenei paletta</a></li>
                         <li><a href="#egyuttmukodes">Együttműködések</a></li>
                     </ul>
                 </li>
@@ -122,6 +125,12 @@
             </div>
             <p id="esemenyek"></p>
         </div>
+        <div class="hangjegyes-elvalaszto">
+            <span class="violinkulcs">&#119070;</span>
+        </div>
+
+
+
         <div class="esemeny-szekcio-wrapper row" id="esemenyek">
             <h2 class="esemeny-cim">Események</h2>
             <div class="esemeny-trioszekcio">
@@ -139,7 +148,7 @@
                             <p>Bartók Terem, Győr</p>
                             <p>Klasszikus és kortárs művek egy estére.</p>
                         </li>
-                        
+
                     </ul>
                 </div>
 
@@ -163,6 +172,7 @@
                 </div>
             </div>
         </div>
+        <div class="egyszeru-elvalaszto"></div>
 
 
         <div class="row">
@@ -196,22 +206,23 @@
                     <h3>Kapcsolat</h3>
 
                     <div class="kapcsolat-tartalom">
-                        <p><strong>Telefon:</strong> <a href="tel:+36203585638">+36 20 358 5638</a></p>
-                        <p><strong>Email:</strong><a
-                                href="mailto:borsosdominika01@gmail.com">borsosdominika01@gmail.com</a></p>
-                        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/dominika.borsos"
-                                target="_blank">facebook.com/dominika.borsos</a></p>
-                        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/borsos_dominika_accordionist/"
-                                target="_blank">@borsos_dominika_accordionist</a></p>
+                        <p><i class="fas fa-phone kapcsolat-ikon"></i><a href="tel:+36203585638">+36 20 358 5638</a></p>
+                        <p><i class="fab fa-facebook-f kapcsolat-ikon"></i><a
+                                href="https://facebook.com/dominika.borsos">facebook.com/dominika.borsos</a></p>
+                        <p><i class="fab fa-instagram kapcsolat-ikon"></i><a
+                                href="https://instagram.com/borsos_dominika_accordionist">@borsos_dominika_accordionist</a>
+                        </p>
+                        <p><i class="fas fa-envelope kapcsolat-ikon"></i><a
+                                href="mailto:dominika.accordionist@gmail.com">dominika.accordionist@gmail.com</a></p>
+
+
+
+
                     </div>
                 </div>
             </section>
         </div>
-        <div class="row">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfq6RiMPyU6ej9ijNcixwfrjTEQgufBWqIyboe63n2mjontGQ/viewform?embedded=true"
-                width="640" height="823" frameborder="0" marginheight="0" marginwidth="0">Betöltés…</iframe>
-        </div>
+
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
