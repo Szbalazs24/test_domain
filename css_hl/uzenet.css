@@ -1,0 +1,39 @@
+.uzenet-szekcio {
+  background-color: #0f0f0f;
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  border: 2px solid rgb(159, 126, 70);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(159, 126, 70, 0.6);
+}
+
+.uzenet-cim {
+  text-align: center;
+  color: #9f7e46;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.uzenet-vonal {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(159, 126, 70);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.form-wrapper iframe {
+  width: 100%;
+  height: 800px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+}
+
+body{
+    padding-top: 3rem;
+    background-color: #0f0f0f;
+}

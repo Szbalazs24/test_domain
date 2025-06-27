@@ -1,0 +1,38 @@
+.audio-szekcio {
+  background-color: #0f0f0f;
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  border: 2px solid rgb(159, 126, 70);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(159, 126, 70, 0.6);
+}
+
+.audio-cim {
+    margin: auto auto 1.2rem auto;
+  text-align: center;
+  color: rgb(159, 126, 70);
+  font-size: 2rem;
+  
+  
+}
+
+.audio-underline {
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(159, 126, 70);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.audio-wrapper {
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(159, 126, 70, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+body{
+    padding-top: 3rem;
+    background-color: #0f0f0f;
+}

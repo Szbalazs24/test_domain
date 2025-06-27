@@ -1,0 +1,58 @@
+
+.bemutatkozas-szekcio {
+    background-color: #0f0f0f; /* törtfehér árnyalat */
+    padding: 2rem 2rem 4rem;
+    color: white; /* sötétbarna szöveg */
+    margin-top: 60px;
+    min-height: 300px;
+}
+
+/* Címsor stílus */
+.bemutatkozas-wrapper h3 {
+    color: rgb(159, 126, 70); /* aranybarna */
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(159, 126, 70, 0.4);
+    padding-bottom: 0.5rem;
+}
+
+/* Szöveg */
+.bemutatkozas-tartalom {
+   
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #3e342b; /* kissé melegebb tónus */
+}
+
+
+/* Kép stílus - nem változik, csak margó finomhangolás */
+.bemutatkozas-kep {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(159,126,70,0.5);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+/* Bekezdések */
+.bemutatkozas-tartalom p {
+    margin: auto 6rem 3rem 6rem;
+    color: white;
+    text-align: justify;
+}
+
+/* Világos háttérhez igazított vízszintes vonal */
+.bemutatkozas-wrapper hr {
+    border: 0;
+    border-top: 1px solid rgba(159, 126, 70, 0.3);
+    margin: 1.5rem 0;
+}
+
+
+body{
+    background-color: black;
+}
